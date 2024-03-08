@@ -16,12 +16,18 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh './output'
+                sh 
+                ./output
+                1
+                2
+                3
+                4
+                5
             }
         }
         stage('Deploy') {
             steps {
-                sh 'exit 1'
+                echo 'deploy'
             }
         }
     }
