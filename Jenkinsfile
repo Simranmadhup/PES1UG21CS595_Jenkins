@@ -16,13 +16,14 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 
-                ./output
-                1
-                2
-                3
-                4
-                5
+                script {
+                    sh './output'
+                    sh 'echo 1'
+                    sh 'echo 2'
+                    sh 'echo 3'
+                    sh 'echo 4'
+                    sh 'echo 5'
+                }
             }
         }
         stage('Deploy') {
@@ -37,3 +38,4 @@ pipeline {
         }
     }
 }
+
